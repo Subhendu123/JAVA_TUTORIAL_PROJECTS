@@ -12,7 +12,7 @@ public class ExceptionExample {
 		try {
 			Operation.divisionMethod(20, 0);
 			ManualThrowExcp.InnerManualThrowExcp innerClssObject = new ManualThrowExcp.InnerManualThrowExcp();
-			
+			//try
 			innerClssObject.isAccessible(2, 0);
 		}/*catch(FileNotFoundException | ArithmeticException e) {
 			e.printStackTrace();
