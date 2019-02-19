@@ -1,6 +1,6 @@
 package myproject.collections;
 
-public class User {
+public class User implements Comparable<User>{
 	private String name;
 	private String id;
 	private long mobileNumber;
@@ -45,5 +45,13 @@ public class User {
 	}
 	public boolean isEmptyUser(User user) {
 		return user == null || user.getName() == null || user.getName().isEmpty();
+	}
+	
+	@Override
+	public int compareTo(User o) {
+		System.out.println("Compare to is called for...... "+o.getName() + " this: "+this.getName());
+		if(this.equals(o))
+			return 0;
+		return 1;
 	}
 }
