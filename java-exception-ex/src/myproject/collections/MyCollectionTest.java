@@ -60,5 +60,15 @@ public class MyCollectionTest{
 			return null;
 		return user;
 	}
+	
+	public static Profile createProfile(String profileName , String userID) {
+		Profile profile = new Profile();
+		profile.setActiveYears(2);
+		profile.setName(profileName);
+		profile.setUserID(userID);
+		profile.setProfileId(profileName+"_"+userID);
+		
+		return profile;
+	}
 
 }
