@@ -1,5 +1,6 @@
 package myproject.collections;
 
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.TreeSet;
@@ -9,11 +10,12 @@ public class SetTest {
 
 	public static void main(String[] args) {
 		HashSet<User> hashSet = new HashSet<User>();
+		Date beforeAdd = new Date();
 		hashSet.add(MyCollectionTest.generateUser("SDAS",25));
 		hashSet.add(MyCollectionTest.generateUser("SP",12));
 		hashSet.add(MyCollectionTest.generateUser("PK",10));
 		hashSet.add(MyCollectionTest.generateUser("SKW",50));
-		
+		System.out.println(new Date().getSeconds()-beforeAdd.getSeconds());
 		
 		Iterator<User> itr = hashSet.iterator();
 		while(itr.hasNext()) {
